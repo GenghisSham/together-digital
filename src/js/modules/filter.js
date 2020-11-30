@@ -4,6 +4,9 @@ const filterLinks = Array.from(postsSection.querySelectorAll('.category-link'));
 const allPosts = Array.from(postsContainer.querySelectorAll('.post'));
 filterLinks.forEach( link => link.addEventListener( 'click', filterClick ) );
 
+const mobileNavButton = postsSection.querySelector('.blog-menu-button');
+mobileNavButton.addEventListener('click', toggleNav);
+
 function filterClick(event) {
     event.preventDefault();
     hideAllLinks();
@@ -46,6 +49,12 @@ function showPost(currentTarget) {
         }
         findPost.classList.add('show');
     }
+}
+
+function toggleNav(event) {
+    (mobileNavButton.getAttribute( 'aria-expanded') === 'false')
+    ? mobileNavButton.setAttribute( 'aria-expanded', true )
+    : mobileNavButton.setAttribute( 'aria-expanded', false );
 }
 
 showAllPosts();

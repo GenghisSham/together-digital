@@ -82,6 +82,7 @@
 
 
     @media (max-width: 670px) {
+
         .blog-menu-button {
             display: block;
 
@@ -104,6 +105,11 @@
             line-height: 16px;
             font-weight: 500;
             padding: 16px 30px;
+
+            span {
+                height: 100%;
+                width: 100%;
+            }
         }
     
         .categories-links {

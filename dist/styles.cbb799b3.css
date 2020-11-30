@@ -640,6 +640,10 @@ blockquote {
     font-weight: 500;
     padding: 16px 30px;
   }
+  .blog-posts .blog-menu-button span {
+    height: 100%;
+    width: 100%;
+  }
   .blog-posts .categories-links {
     display: flex;
     flex-wrap: wrap;
