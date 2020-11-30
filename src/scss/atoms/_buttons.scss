@@ -1,0 +1,29 @@
+.button {
+    display: block;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: visible;
+    white-space: nowrap;
+    box-shadow: none;
+    text-shadow: none;
+    text-align: center;
+    background-position: center;
+    text-transform: uppercase;
+    margin: 0;
+    width: fit-content;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: $bf-medium;
+    padding: 16px 30px;
+
+    &:hover{
+        background-color: darken($darken-hover, 10%);
+    }
+    &:active {
+        background-color: darken($darken-hover, 5%);
+    }
+}

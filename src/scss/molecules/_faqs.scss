@@ -1,0 +1,121 @@
+.questions {
+
+    @media(min-width: 900px) {
+        grid-auto-flow: column;
+    }
+    display: grid;
+    grid-gap: 40px 100px;
+
+    .faq-text {
+        @media(min-width: 900px) {
+            max-width: 380px;
+        }
+        
+
+        h2 {
+            margin: 0 0 30px 0;
+            font-size: 28px;
+            line-height: 36px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            color: var(--darkGrey);
+        }
+    }
+
+    .faqs {
+        // border-bottom: 1px solid var(--lightGrey);
+        
+        padding: 25px 0;
+        position: relative;
+
+        &:first-of-type {
+            padding: 0 0 25px 0;
+        }
+
+        &:after {
+            content: '';
+            height: 1px;
+            background: linear-gradient(to right, var(--orange) 50%, var(--offWhite) 50%);
+            background-size: 200% 1px;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            &:after {
+                background-position: left bottom;
+            }
+        }
+    }
+
+    .question {
+        outline: none;
+        background: unset;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--black);
+        text-align: left;
+
+        &:hover{
+            color: var(--orange);
+        }
+    }
+
+    .question[aria-selected=false] {
+        &:after {
+            content: url('../../images/close.svg');
+            height: 35px;
+            width: 35px;
+        }
+        +.answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in;
+        }
+    }
+    .question[aria-selected=true] {
+        &:after {
+            content: url('../../images/open.svg');
+            height: 35px;
+            width: 35px;
+        }
+        +.answer {
+            max-height: 200px;
+            transition: max-height 0.3s ease-out;
+        }
+    }
+    .answer {
+        p {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            color: var(--darkGrey);
+            /* margin: 30px 0 40px 0; */
+            margin: 0;
+        }
+
+        // &.hidden {
+        //     visibility: hidden;
+        //     height: 0;
+        //     opacity: 0;
+        // }
+    }
+
+}

@@ -1,0 +1,15 @@
+:root {
+    --white:  hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 14%);
+    --offWhite: hsl(210, 22%, 96%);
+    --lightGrey: hsl(0, 0%, 78%);
+    --grey: hsl(0, 0%, 57%);
+    --darkGrey: hsl(204, 4%, 25%);
+    --orange: hsl(25, 100%, 48%);
+    --blueGrey: hsl(208, 21%, 66%);
+    --blue: hsl(198, 98%, 48%);
+    --purple: hsl(279, 82%, 25%);
+    --lightPurple: hsl(277, 27%, 94%);
+}
+// darken doesn't like var strings
+$darken-hover: hsl(25, 100%, 48%);

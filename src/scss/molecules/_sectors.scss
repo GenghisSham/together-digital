@@ -1,0 +1,129 @@
+.sectors {
+    overflow: hidden;
+    display: grid;
+    grid-row-gap: 90px;
+    overflow: hidden;
+
+    .top {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: unset;
+        }
+    }
+
+    button {
+        height: 45px;
+        width: 45px;
+        background-color: var(--blueGrey);
+        outline: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        #Artboard {
+            fill: var(--white);
+            stroke: transparent;
+        }
+        &.goToPrev {
+            border-radius: 3px 0 0 3px;
+            &:hover {
+                #Artboard {
+                    fill: var(--orange);
+                }
+            }
+        }
+        &.goToNext {
+            border-radius: 0 3px 3px 0;
+
+            &:hover {
+                #Artboard {
+                    fill: var(--orange);
+                }
+            }
+        }
+    }
+
+    .slider {
+        background-color: var(--offWhite);
+
+        .slides {
+            display: grid;
+            grid-gap: 3px;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            transform: translate(130px, -50px);
+        }
+
+        figure {
+            min-width: 380px;
+        }
+
+        a {
+            text-decoration: none;
+
+            h3 {
+                padding: 0 0 0 10px;
+                margin: 30px 0 0 0;
+            }
+        }
+        a:hover {
+            h3 {
+                color: var(--orange);
+            }
+        }
+    }
+
+	.slides {
+        position: relative;
+        min-height: 380px;
+	}
+
+	.slide {
+        transition: all 0.25s;
+        transform: translateX(200%);
+        position: absolute;
+        width: 380px;
+        height: 100%;
+
+        // display: none;
+
+        &.current, &.next, &.prev, &.next + .slide {
+            display: grid;
+            z-index: 10;
+        }
+	}
+
+	.slide.next + .slide {
+        transform: translateX(200%);
+    }
+
+	.slide.prev {
+        transform: translateX(300%);
+    }
+    
+	.slide.current {
+        transform: translateX(0);
+    }
+    
+	.slide.next {
+        transform: translateX(100%);
+	}
+
+}

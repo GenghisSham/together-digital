@@ -1,0 +1,62 @@
+.wrapper {
+    font-family: $base-font;
+}
+
+h1, h2, h3, h4, p, .section-header span, blockquote, .post-title {
+    color: var(--black);
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: $bf-bold;
+}
+h2 {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: $bf-semi-bold;
+}
+h3 {
+    font-weight: $bf-semi-bold;
+}
+h4 {
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: $bf-semi-bold;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: $bf-light;
+}
+
+.section-header span {
+    font-weight: $bf-medium;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+blockquote {
+    font-size: 23px;
+    line-height: 42px;
+    font-weight: $bf-regular;
+}
+
+.post-meta{
+     .category {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .author {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: $bf-medium;
+        color: var(--lightGrey);
+    }
+}

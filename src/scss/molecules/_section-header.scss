@@ -1,0 +1,32 @@
+header {
+    margin-top: 10px;
+    // padding: 0 15px;
+    
+    @media(min-width: $break-tablet) {
+        margin-top: 30px;
+    }
+    
+    @media(min-width: $break-desktop-sm) {
+        margin-top: 60px;
+    }
+
+    span {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-gap: 50px;
+        align-items: center;
+        
+        &:before, &:after {
+            display: block;
+            content: '';
+            height: 1px;
+            background: linear-gradient(to var(--direction, left), var(--lightGrey), var(--lightGrey));
+        }
+    
+        &:after {
+            --direction: right;
+        }
+    }
+
+}
