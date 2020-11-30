@@ -8,3 +8,4 @@ use parcel,
 use netlify,
 vanilla js,
 only use grid (unless it was pointless),
+no libraries for the sliders(all js)
