@@ -37,26 +37,22 @@
         justify-content: center;
         cursor: pointer;
 
-        #Artboard {
-            fill: var(--white);
-            stroke: transparent;
+        g g{
+                fill: var(--white);
+                stroke: none;
+        }
+        &.goToPrev, &.goToNext {
+            &:hover {
+                g g {
+                    fill: var(--orange);
+                }
+            }
         }
         &.goToPrev {
             border-radius: 3px 0 0 3px;
-            &:hover {
-                #Artboard {
-                    fill: var(--orange);
-                }
-            }
         }
         &.goToNext {
             border-radius: 0 3px 3px 0;
-
-            &:hover {
-                #Artboard {
-                    fill: var(--orange);
-                }
-            }
         }
     }
 
