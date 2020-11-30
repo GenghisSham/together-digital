@@ -1,6 +1,5 @@
 header {
     margin-top: 10px;
-    // padding: 0 15px;
     
     @media(min-width: $break-tablet) {
         margin-top: 30px;
@@ -21,12 +20,13 @@ header {
             display: block;
             content: '';
             height: 1px;
-            background: linear-gradient(to var(--direction, left), var(--lightGrey), var(--lightGrey));
+            // background: linear-gradient(to var(--direction, left), var(--lightGrey), var(--lightGrey));
+            background: linear-gradient(to right, var(--lightGrey), var(--lightGrey));
+        }
+        &:after {
+            // --direction: right;
         }
     
-        &:after {
-            --direction: right;
-        }
     }
 
 }

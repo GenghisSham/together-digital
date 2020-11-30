@@ -4,22 +4,18 @@
 
     display: grid;
     grid-gap: 60px 15px;
-    // grid-template-columns: 1fr minmax(65ch, 1180px) 1fr;
     grid-template-columns: 1fr minmax(300px, 1180px) 1fr;
 
     @media (min-width: 900px) {
         grid-gap: 130px 15px;
     }
 
-
     & > * {
         grid-column: 2;
-        // padding: 0 15px;
     }
 
     & .full-bleed {
         width: 100%;
         grid-column: 1 / -1;
-        // padding: 0;
     }
 }
