@@ -29,7 +29,7 @@
 
     .posts {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
         grid-gap: 55px;
 
         .post {

@@ -15,6 +15,11 @@ header {
         grid-template-columns: 1fr auto 1fr;
         grid-gap: 50px;
         align-items: center;
+
+        @media(max-width: $break-tablet-small) {
+            grid-column: 2;
+            grid-gap: unset;
+        }
         
         &:before, &:after {
             display: block;
@@ -23,9 +28,9 @@ header {
             // background: linear-gradient(to var(--direction, left), var(--lightGrey), var(--lightGrey));
             background: linear-gradient(to right, var(--lightGrey), var(--lightGrey));
         }
-        &:after {
+        // &:after {
             // --direction: right;
-        }
+        // }
     
     }
 

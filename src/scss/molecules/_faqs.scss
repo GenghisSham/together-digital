@@ -80,7 +80,7 @@
 
     .question[aria-selected=false] {
         &:after {
-            content: url('../../images/close.svg');
+            content: url('../../images/open.svg');
             height: 35px;
             width: 35px;
         }
@@ -92,7 +92,7 @@
     }
     .question[aria-selected=true] {
         &:after {
-            content: url('../../images/open.svg');
+            content: url('../../images/close.svg');
             height: 35px;
             width: 35px;
         }

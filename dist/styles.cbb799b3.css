@@ -582,7 +582,7 @@ blockquote {
 }
 .blog-posts .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-gap: 55px;
 }
 .blog-posts .posts .post {
@@ -732,7 +732,7 @@ blockquote {
   color: var(--orange);
 }
 .questions .question[aria-selected=false]:after {
-  content: url("/close.4440cd52.svg");
+  content: url("/open.04fb09b9.svg");
   height: 35px;
   width: 35px;
 }
@@ -742,7 +742,7 @@ blockquote {
   transition: max-height 0.3s ease-in;
 }
 .questions .question[aria-selected=true]:after {
-  content: url("/open.04fb09b9.svg");
+  content: url("/close.4440cd52.svg");
   height: 35px;
   width: 35px;
 }
@@ -771,7 +771,7 @@ blockquote {
 .features .features-container {
   display: grid;
   grid-gap: 45px 35px;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 .features .feature {
   text-align: left;
@@ -815,12 +815,19 @@ header span {
   grid-gap: 50px;
   align-items: center;
 }
+@media (max-width: 640px) {
+  header span {
+    grid-column: 2;
+    grid-gap: unset;
+  }
+}
 header span:before, header span:after {
   display: block;
   content: "";
   height: 1px;
   background: linear-gradient(to right, var(--lightGrey), var(--lightGrey));
 }
+
 .sectors {
   overflow: hidden;
   display: grid;
@@ -881,6 +888,11 @@ header span:before, header span:after {
   grid-auto-flow: column;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   transform: translate(130px, -50px);
+}
+@media (max-width: 640px) {
+  .sectors .slider .slides {
+    transform: unset;
+  }
 }
 .sectors .slider figure {
   min-width: 380px;
@@ -994,6 +1006,12 @@ header span:before, header span:after {
   width: 100%;
   top: 50%;
 }
+@media (max-width: 768px) {
+  .quotes .controls {
+    top: unset;
+    bottom: 0;
+  }
+}
 .quotes .controls .goToPrev, .quotes .controls .goToNext {
   outline: unset;
   padding: 0;
@@ -1083,6 +1101,11 @@ header span:before, header span:after {
 .wrapper .full-bleed {
   width: 100%;
   grid-column: 1/-1;
+}
+@media (max-width: 1248px) {
+  .wrapper .full-bleed {
+    grid-column: 2;
+  }
 }
 
 /*# sourceMappingURL=/styles.cbb799b3.css.map */
