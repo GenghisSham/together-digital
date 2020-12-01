@@ -85,7 +85,9 @@
         +.answer {
             max-height: 0;
             overflow: hidden;
-            transition: all 0.6s ease-in;
+            transition: all .6s ease-out;
+            transform: scaleY(0);
+            margin: 0;
         }
     }
     .question[aria-selected=true] {
@@ -95,8 +97,10 @@
             width: 35px;
         }
         +.answer {
-            max-height: 200px;
-            transition: all 0.6s ease-out;
+            max-height: 400px;
+            transform: scaleY(1);
+            transition: all .6s ease-in;
+            margin: 30px 0 10px 0;
         }
     }
     .answer {
