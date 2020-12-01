@@ -1,6 +1,6 @@
 .quotes {
 	display: grid;
-	grid-row-gap: 20px;
+	grid-row-gap: 40px;
 }
 
 .quotation-mark-icon {
@@ -13,6 +13,10 @@
 		position: relative;
 		display: grid;
     	grid-row-gap: 40px;
+	}
+
+	.slide-text {
+		text-align: center;
 	}
 
 	.slides {
@@ -88,21 +92,21 @@
 			border: none;
 
 			cursor: pointer;
+			transition: all 0.35s linear;
+			
 			&:hover {
-				transition: all 0.35s;
-			}
+				transform: scale(1.5);
+                g g {
+					fill: var(--orange);
+					stroke: var(--orange);
+                }
+            }
 		}
 		.goToPrev {
 			padding: 10px 10px 10px 0;
-			&:hover {
-				transform: translate(-10px, 0) scale(1.1);
-			}
 		}
 		.goToNext {
 			padding: 10px 0 10px 10px;
-			&:hover {
-				transform: translate(10px, 0) scale(1.1);
-			}
 		}
 	}
 
@@ -117,7 +121,7 @@
 		.dot {
 			height: 3px;
 			width: 15px;
-			margin: 0 5px;;
+			margin: 0 2px;
 
 			&.current-dot {
 				background-color: var(--black);

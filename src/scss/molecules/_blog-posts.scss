@@ -34,16 +34,35 @@
 
         .post {
             display: none;
+            cursor: pointer;
 
             &.show {
                 display: block;
             }
+            &:hover {
+    
+                h4 {
+                    text-decoration: underline;
+                }
+    
+            }
         }
+
 
     }
 
     .post-image {
         margin: 0 0 25px 0;
+        overflow: hidden;
+        img {
+            transition: all 0.5s linear;
+        }
+
+        &:hover {
+             img{
+                transform: scale(1.5);
+            }
+        }
     }
 
     .post-meta {
@@ -79,7 +98,6 @@
     [aria-controls="menu-list"] {
         display: none;
     }
-
 
     @media (max-width: 670px) {
 

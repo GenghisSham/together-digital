@@ -28,9 +28,7 @@
     }
 
     .faqs {
-        // border-bottom: 1px solid var(--lightGrey);
-        
-        padding: 25px 0;
+        padding: 28px 0;
         position: relative;
 
         &:first-of-type {
@@ -70,7 +68,7 @@
         line-height: 30px;
         font-weight: 600;
         cursor: pointer;
-        color: var(--black);
+        color: var(--darkGrey);
         text-align: left;
 
         &:hover{
@@ -87,7 +85,7 @@
         +.answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in;
+            transition: all 0.6s ease-in;
         }
     }
     .question[aria-selected=true] {
@@ -98,7 +96,7 @@
         }
         +.answer {
             max-height: 200px;
-            transition: max-height 0.3s ease-out;
+            transition: all 0.6s ease-out;
         }
     }
     .answer {
